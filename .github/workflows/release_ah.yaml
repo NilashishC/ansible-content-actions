@@ -1,6 +1,5 @@
 ---
 name: Automation hub release
-
 "on":
   workflow_call:
     inputs:
@@ -25,6 +24,8 @@ jobs:
     name: Automation Hub release
     environment: "${{ inputs.environment }}"
     steps:
+      - uses: actions/checkout@v4
+
       - name: Build the collection
         run: |
           ansible-galaxy collection build -v --force
