@@ -35,7 +35,7 @@ jobs:
           TARBALL=$(ls -1 ./*.tar.gz)
 
           if [[ -n "${{ secrets.ah_token }}" ]]; then
-          echo "Using ah_token for authentication"
+            echo "Using ah_token for authentication"
 
           cat << EOF > ansible.cfg
           [galaxy]
@@ -47,7 +47,7 @@ jobs:
           EOF
 
           elif [[ -n "${{ secrets.client_id }}" && -n "${{ secrets.client_secret }}" ]]; then
-          echo "Using ah_client_id and ah_client_secret for authentication"
+            echo "Using ah_client_id and ah_client_secret for authentication"
           cat << EOF > ansible.cfg
           [galaxy]
           server_list = automation_hub
