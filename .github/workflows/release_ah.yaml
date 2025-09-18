@@ -36,7 +36,6 @@ jobs:
 
           if [[ -n "${{ secrets.ah_token }}" ]]; then
             echo "Using ah_token for authentication"
-
           cat << EOF > ansible.cfg
           [galaxy]
           server_list = rh_automation_hub
