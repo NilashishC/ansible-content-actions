@@ -33,6 +33,7 @@ jobs:
         if: "${{ inputs.ah_publish }}"
         run: >
           TARBALL=$(ls -1 ./*.tar.gz)
+
           if [[ -n "${{ secrets.ah_token }}" ]]; then
           echo "Using ah_token for authentication"
 
